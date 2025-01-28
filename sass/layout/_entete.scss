@@ -5,6 +5,19 @@
 
     &__nav{
         display: flex;
+        flex-direction: row; 
 
+        @media screen and (max-width:$point__rupture) {
+            flex-direction: column;       
+        }
+ 
+        align-items: center;
+        gap: 0 40px;
+        flex-wrap: wrap;
     }
+}
+
+.logo{
+    
+    width: 100%;
 }
