@@ -1,23 +1,54 @@
+.burger{
+    display: none;
+    @media screen and (max-width: $point__rupture) {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+    }
+}
+.chk__burger{
+    display: none;
+}
+.chk__burger:checked ~ .entete__nav{
+    display: flex;
+}
+
+
 .entete{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(252, 241, 252);
 
     &__nav{
         display: flex;
-        flex-direction: row; 
+        justify-content: flex-end;
+        position: static;
 
         @media screen and (max-width:$point__rupture) {
-            flex-direction: column;       
+            display: none;
+            flex-direction: column;
+            height: 40vh;
+            width: 100vw;
+            padding-bottom: 20px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgb(252, 241, 252);
         }
  
         align-items: center;
         gap: 0 40px;
         flex-wrap: wrap;
     }
-}
 
-.logo{
-    
-    width: 100%;
+    &__logo{
+        width: 300px;
+        z-index: 2;
+        @media screen and (max-width:$point__rupture) {
+            width: 110px;
+        }
+    }
 }

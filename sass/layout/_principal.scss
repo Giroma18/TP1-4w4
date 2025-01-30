@@ -3,6 +3,13 @@
     max-width: 1000px;
 }
 .hero {
+    display: flex;
     min-height: 100vh;
     background-image: url("images/maldives.jpg");
+
+    &__titre{
+        font-family: "Smoosh Sans";
+        margin: 100px;
+        align-self: center;
+    }
 }

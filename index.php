@@ -1,11 +1,15 @@
+<?php
+/** Modèle de base de la base de donnée */
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <?php wp_head(); ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
@@ -14,7 +18,7 @@
     <header>
         <div class="entete">
             <figure class="entete__logo">
-                <img class="entete__logo" src="./images/logoVoyage.png" alt="logo">
+                <img class="entete__logo" src="http://localhost/4w4/wp-content/themes/tp1/images/logoVoyage.png" alt="logo">
             </figure>
            <label for="chk__burger" class="burger">
                 <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
