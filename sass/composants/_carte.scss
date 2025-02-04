@@ -3,21 +3,32 @@ Le composant .carte
 ********************** */
 
 .carte {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    
+  font-weight: bold;
+  font-family: "Advent Pro", sans-serif;
+
   
     &--grande {
-      padding: 40px;
+      margin-top: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   
     }
   
     &__image img {
-      max-width: 100%;
-      border-radius: 8px;
+      width: 300px;
+      height: 200px;
+
+      @media screen and (max-width:$point__rupture) {
+        width: 200px;
+        height: 100px;
+      }
     }
+
+
   
     &__contenu {
+      margin: 50px;
       margin-top: 15px;
     }
   
@@ -44,7 +55,7 @@ Le composant .carte
       }
   
       &:hover {
-        background-color: #0056b3;
+        background-color: #add4ff;
       }
     }
   }
