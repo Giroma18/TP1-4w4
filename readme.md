@@ -3,4 +3,4 @@
 
 Créer une page d'accueil en utilisant le standard BEM et Sass pour reproduire le contenu de maquette.
 Auteur: Valérie Giroux-Martone
-### Github-page: 
+### Github-page: https://giroma18.github.io/TP1-4w4/
