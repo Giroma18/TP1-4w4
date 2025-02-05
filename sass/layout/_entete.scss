@@ -8,6 +8,7 @@
         z-index: 1;
     }
 }
+
 .chk__burger{
     display: none;
 }
@@ -20,28 +21,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(252, 241, 252);
+    background-color: $couleur__fond;
 
     &__nav{
         display: flex;
         justify-content: flex-end;
         position: static;
+        align-items: center;
+        gap: 0 40px;
+        flex-wrap: wrap;
 
         @media screen and (max-width:$point__rupture) {
             display: none;
             flex-direction: column;
-            height: 40vh;
+            flex-wrap: nowrap;
+
+            height: 55vh;
             width: 100vw;
-            padding-bottom: 20px;
+            gap: 0;
+
+            padding-bottom: 100px;
             position: absolute;
             top: 0;
             right: 0;
-            background-color: rgb(252, 241, 252);
-        }
- 
-        align-items: center;
-        gap: 0 40px;
-        flex-wrap: wrap;
+            background-color: $couleur__fond;        
+        }  
     }
 
     &__logo{
