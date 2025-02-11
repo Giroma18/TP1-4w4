@@ -12,19 +12,21 @@
     gap: 6px 0;
   }
   
-    &__li {
+    &-item {
 
-      @media screen and (max-width:$point__rupture) {
+      @media screen and (max-width:$point__rupture) 
+      {
         margin: 5px;
       }
-      
-    }
-      &__a {
-        padding: 2px 5px;
-        font-family: "Advent Pro", sans-serif;
-        text-transform: uppercase;
-        @media screen and (max-width:$point__rupture) {
-          color: black;
+        a 
+        {
+          padding: 2px 5px;
+          font-family: "Advent Pro", sans-serif;
+          text-transform: uppercase;
+          @media screen and (max-width:$point__rupture) {
+            color: black;
+          }
         }
+     
       }
 }

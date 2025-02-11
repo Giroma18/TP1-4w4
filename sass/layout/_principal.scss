@@ -1,13 +1,16 @@
 .global {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    
     font-size: 20px;
-    margin-left: 40px;
     max-width: 1000px;
 
 }
 .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
     min-height: 100vh;
     background-image: url("images/maldives.jpg");
     font-family: "Smoosh Sans", sans-serif;
@@ -42,6 +45,15 @@
         flex-direction: row;
     }
 
+}
+
+.boiteflex {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .formulaire {
@@ -109,4 +121,7 @@
         outline: none;
       }
     
+}
+.populaire{
+    margin-top: 100px;
 }

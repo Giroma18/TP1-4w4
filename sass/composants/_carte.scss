@@ -5,13 +5,18 @@ Le composant .carte
 .carte {
   font-weight: bold;
   font-family: "Advent Pro", sans-serif;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 220px;
+  border: #cac9c9 solid 1px;
+
 
   
     &--grande {
-      margin-top: 100px;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
+      padding: 20px;
    
     }
   
@@ -28,7 +33,6 @@ Le composant .carte
 
   
     &__contenu {
-      margin: 50px;
       margin-top: 15px;
     }
   
