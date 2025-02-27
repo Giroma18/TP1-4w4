@@ -61,28 +61,13 @@
 
     <section class="populaire">
         <div class="boiteflex global">
-
+            
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php if (in_category('galerie')){
                     the_content();
                 } else { ?>
 
-                <article class="carte carte--grande">
-
-                    <figure class="carte__image">
-                        <img src="voyage.jpg" alt="Image de voyage">
-                    </figure>
-                    
-                     <h2 class="populaire__titre"><?php the_title(); ?></h2>
-
-                        <div class="populaire__contenu">
-                            <?php echo wp_trim_words(get_the_excerpt(), 20,"..."); ?>
-                        </div>
-
-                    <div class="carte__contenu">
-                        <button class="carte__bouton carte__bouton--actif">Suite</button>
-                    </div>
-                </article>
+              <?php get_template_part("gabarit/carte"); ?>
                 <?php } ?>
             <?php endwhile; endif; ?>
         </div>
