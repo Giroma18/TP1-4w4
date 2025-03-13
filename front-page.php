@@ -2,39 +2,14 @@
 /** 
  * modèle front-page.php permet d'afficher la page d'accueil
 */
+
+
 ?>
    
    
    <?php get_header() ?>
-   <h1>front-page.php</h1>
-
-    <section class="hero">
-        <div class="hero__contenu global">
-            <h1 class="hero__titre">
-                <?php bloginfo('name'); ?>
-            </h1>
-            <p class="hero__description">
-                <?php bloginfo('desciption'); ?>
-            </p>
-            <a href="" class="hero__description">
-                info@cmaisonneuve.qc.ca
-            </a>
-            <a href="" class="hero__description">
-                3800, rue Sherbrooke, Montréal
-            </a>
-            <a href="" class="hero__description">
-                514-254-7131
-            </a>
-            <button class="hero__bouton">
-                Inscription
-            </button>
-            <div class="hero__icone-app">
-                <img src="https://s2.svgbox.net/materialui.svg?ic=facebook&color=000" width="32" height="32">
-                <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000" width="32" height="32">
-            </div>
-        </div>
-    </section>
-   
+   <?php get_template_part('gabarit/hero') ?>
+ 
     <section class="formulaire">
         <form class="formulaire__contenu">
             <div class="formulaire__groupe">

@@ -13,9 +13,15 @@
                                 the_post_thumbnail('thumbnail'); }
                             ?>
                     </figure> 
-                    <h2 class="populaire__titre"><?php the_title(); ?></h2> 
+                    <h2 class="carte__titre"><?php the_title(); ?></h2> 
                     <?php echo wp_trim_words(get_the_excerpt(), 20,"..."); ?>
-                    <?php the_category() ?>
+                    <div class="carte__temp">
+                        <p>Température min. <?php echo the_field('temperature_minimum'); ?>°C</p>
+                        <p>Température max. <?php echo the_field('temperature_maximum'); ?>°C</p>
+                        <p>Température moy. <?php echo the_field('temperature_moyenne'); ?>°C</p>
+                    </div>
+                
+                    <?php the_category();?>
                     <div class="carte__contenu">
                         <a class="carte__bouton carte__bouton--actif" href="<?php the_permalink();?>">Suite</a>
                     </div>
