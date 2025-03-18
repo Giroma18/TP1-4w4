@@ -27,7 +27,7 @@
                 <?php echo $footer_adresse = get_theme_mod('footer_adresse', 'Default Title'); ?>
             </a>
             <a href="" class="piedpage__s2__tel">
-                <?php echo $footer_adresse = get_theme_mod('footer_telephone', 'Default Title'); ?>
+                <?php echo $footer_telephone = get_theme_mod('footer_telephone', 'Default Title'); ?>
             </a>
            
             <div class="piedpage__s1__adresse__recherche">
