@@ -111,6 +111,23 @@ function theme_31w_customize_register($wp_customize) {
       'label' => __('Couleur de icone', 'theme_31w'),
       'section' => 'hero_section',
     )));
+
+      ///////////////////////////////////////////////////////////// Nouvelle section page 404
+      $wp_customize->add_section('erreur_section', array(
+        'title' => __('page404', 'theme_31w'),
+        'priority' => 30,
+      ));
+
+    ////////////////////////////////////////////////////////// Image en background de la page 404
+    $wp_customize->add_setting('erreur_background', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_background', array(
+      'label' => __('Image en background', 'theme_31w'),
+      'section' => 'erreur_section',
+    )));
   
   }
   
