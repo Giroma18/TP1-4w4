@@ -173,6 +173,22 @@ Le composant .carte
   cursor: pointer;
 }
 
+.erreur__contenu {
+  font-family: "Smoosh Sans", sans-serif;
+  font-size: x-large;
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 200px;
+  margin: 0 auto;
+}
+.erreur__titre {
+  color: blue;
+  font-size: 100px;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
