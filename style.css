@@ -195,6 +195,20 @@ Le composant .carte
   flex-direction: column;
   align-items: center;
 }
+.erreur__menu {
+  padding: 0px;
+  border-radius: 8px;
+}
+.erreur__menu ul {
+  padding: 5px;
+  gap: 30px;
+}
+.erreur__menu {
+  background-color: #288781;
+  display: flex;
+  flex: 1;
+  align-content: center;
+}
 
 /* /////////////////////////
 Layout

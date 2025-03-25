@@ -17,6 +17,13 @@
             <div>
                 <?php get_template_part('gabarit/icone-sociaux') ?>
             </div>
+            <div class="erreur__menu">
+                <?php wp_nav_menu(array(
+                        "menu"=>"404",
+                        "container"=>"nav",
+                        "container_class"=>"erreur__menu"
+                ));?>
+            </div>
         </div>
     </section>
     <?php get_footer() ?>

@@ -26,4 +26,21 @@
         align-items: center;
 
     }
+    &__menu{
+   
+        padding: 0px;
+        border-radius: 8px;
+
+        ul{
+            padding: 5px;
+            gap: 30px;
+        }
+    }
+
+    &__menu{
+        background-color: #288781;
+        display: flex;
+        flex: 1;
+        align-content: center;
+    }
 }
