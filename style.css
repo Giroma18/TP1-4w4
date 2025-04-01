@@ -179,22 +179,28 @@ Le composant .carte
   padding: 200px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
   gap: 20px;
 }
 .erreur__titre {
+  text-align: center;
+  align-content: center;
   font-family: "Smoosh Sans", sans-serif;
-  color: #ff9d00;
-  font-size: 2.5em;
+  color: #ffd000;
+  font-size: 3.5em;
 }
 .erreur__block {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .erreur__block p {
-  color: #ff9d00;
+  font-weight: bolder;
+  text-align: center;
+  color: #ffd000;
 }
 .erreur__menu ul {
   display: flex;
@@ -204,7 +210,7 @@ Le composant .carte
   background-color: #ffea00;
   padding: 10px;
   color: black;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .erreur__boutton {
   align-items: center;
@@ -212,8 +218,8 @@ Le composant .carte
   font-weight: bolder;
   font-size: large;
   background-color: #ffea00;
-  color: aquamarine;
-  border-radius: 8px;
+  color: rgb(127, 206, 255);
+  border-radius: 6px;
   border: none;
   padding: 20px;
   width: 200px;

@@ -2,7 +2,7 @@
 /** 
  * modèle de page 404
 */
-    $erreur_background = get_theme_mod('hero_background', 'Default Title'); 
+    $erreur_background = get_theme_mod('erreur_background', 'Default Title'); 
 ?>
    
    
@@ -11,7 +11,7 @@
     <section class="erreur__contenu"  style="background-image: url('<?php echo $erreur_background ?>'); background-repeat: no-repeat">
 
         <div class="erreur__block">
-            <h1 class="erreur__titre">Oops, vous avez échoué sur l'île 404 !</h1>
+            <h1 class="erreur__titre">Oops, vous avez échoué<br> sur l'île 404 !</h1>
 
         </div>
 
