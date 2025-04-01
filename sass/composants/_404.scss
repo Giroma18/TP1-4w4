@@ -1,6 +1,7 @@
 .erreur{
 
     &__contenu{
+        
         font-size: x-large;
         color: rgb(255, 255, 255);
         padding: 200px;
@@ -10,6 +11,8 @@
         justify-content: center;
         align-content: center;
         gap: 20px;
+
+        filter: brightness(90%) contrast(110%) sepia(10%);
     }
 
     &__titre{
@@ -144,4 +147,53 @@
         }
     }
     }
+
+/* Media Query pour les écrans de taille tablette (entre 768px et 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .erreur{
+    
+    &__contenu {
+        padding: 80px;
+        background-size: contain;
+        background-position: top center; 
+        height: auto;
+    }
+    
+    &__titre {
+        font-size: 2.5em;
+    }
+
+    &__block {
+        padding: 20px;
+
+        p{
+            font-size: 0.9em;
+        }
+    }
+
+    &__menu {
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+
+    &__boutton {
+        font-size: 25px; 
+        width: 250px; 
+        padding: 12px; 
+    }
+
+    &__rechercher {
+        width: 280px; 
+        font-size: 25px; 
+    }
+
+    &__rechercher[type="search"]::placeholder {
+        font-size: 20px; 
+    }
+    }
+}
 

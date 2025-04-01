@@ -182,6 +182,7 @@ Le composant .carte
   justify-content: center;
   align-content: center;
   gap: 20px;
+  filter: brightness(90%) contrast(110%) sepia(10%);
 }
 .erreur__titre {
   text-align: center;
@@ -285,6 +286,42 @@ Le composant .carte
   }
   .erreur__rechercher[type=search]::placeholder {
     font-size: 18px;
+  }
+}
+/* Media Query pour les écrans de taille tablette (entre 768px et 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .erreur__contenu {
+    padding: 80px;
+    background-size: contain;
+    background-position: top center;
+    height: auto;
+  }
+  .erreur__titre {
+    font-size: 2.5em;
+  }
+  .erreur__block {
+    padding: 20px;
+  }
+  .erreur__block p {
+    font-size: 0.9em;
+  }
+  .erreur__menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+  .erreur__boutton {
+    font-size: 25px;
+    width: 250px;
+    padding: 12px;
+  }
+  .erreur__rechercher {
+    width: 280px;
+    font-size: 25px;
+  }
+  .erreur__rechercher[type=search]::placeholder {
+    font-size: 20px;
   }
 }
 /* /////////////////////////
