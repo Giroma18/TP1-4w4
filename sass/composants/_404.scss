@@ -1,7 +1,6 @@
 .erreur{
 
     &__contenu{
-        font-family: "Smoosh Sans", sans-serif;
         font-size: x-large;
         color: rgb(255, 255, 255);
         padding: 200px;
@@ -12,20 +11,21 @@
     }
 
     &__titre{
-        color: #ffea00;
+        font-family: "Smoosh Sans", sans-serif;
+        color: #ff9d00;
         font-size: 2.5em;
     }
 
     &__block{
         padding: 20px;
-        background-color: rgba($color: #ffffff, $alpha: 0.5);
+        background-color: rgba($color: #ffffff, $alpha: 0.9);
 
         display: flex;
         flex-direction: column;
         align-items: center;
 
         p {
-            color: #ffea00;
+            color: #ff9d00;
         }
 
     }
@@ -54,14 +54,35 @@
         border-radius: 8px;
         border: none;
         padding: 20px;
-        
-        width: 100px;
+        width: 200px;
         display: flex;
-        align-content: center;
+        align-self: center;
 
     }
     &__boutton:hover{
         background-color: aquamarine;
         color: violet;
+    }
+
+    &__rechercher{
+        background-color: transparent;
+        border: none;
+        border-bottom: 4px solid #ffea00;
+        width: 200px;
+        display: flex;
+        align-self: center;
+
+        font-size: 30px;
+
+        width: 300px;
+    }
+
+    &__rechercher[type="search"]::placeholder{
+        font-family: 'Courier New', Courier, monospace;
+        color: #ffea00;
+        font-weight: bolder;
+        padding-left: 20px;
+        width: 200px;
+        
     }
 }

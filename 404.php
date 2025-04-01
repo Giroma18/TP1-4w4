@@ -30,7 +30,7 @@
                 ));?>
             </div>
 
-        <input class="erreur__rechercher" type="placeholder">
+        <input class="erreur__rechercher" type="search" placeholder="Rechercher...">
         
     </section>
     <?php get_footer() ?>

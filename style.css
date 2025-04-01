@@ -174,7 +174,6 @@ Le composant .carte
 }
 
 .erreur__contenu {
-  font-family: "Smoosh Sans", sans-serif;
   font-size: x-large;
   color: rgb(255, 255, 255);
   padding: 200px;
@@ -183,18 +182,19 @@ Le composant .carte
   gap: 20px;
 }
 .erreur__titre {
-  color: #ffea00;
+  font-family: "Smoosh Sans", sans-serif;
+  color: #ff9d00;
   font-size: 2.5em;
 }
 .erreur__block {
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .erreur__block p {
-  color: #ffea00;
+  color: #ff9d00;
 }
 .erreur__menu ul {
   display: flex;
@@ -216,13 +216,30 @@ Le composant .carte
   border-radius: 8px;
   border: none;
   padding: 20px;
-  width: 100px;
+  width: 200px;
   display: flex;
-  align-content: center;
+  align-self: center;
 }
 .erreur__boutton:hover {
   background-color: aquamarine;
   color: violet;
+}
+.erreur__rechercher {
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid #ffea00;
+  width: 200px;
+  display: flex;
+  align-self: center;
+  font-size: 30px;
+  width: 300px;
+}
+.erreur__rechercher[type=search]::placeholder {
+  font-family: "Courier New", Courier, monospace;
+  color: #ffea00;
+  font-weight: bolder;
+  padding-left: 20px;
+  width: 200px;
 }
 
 /* /////////////////////////
