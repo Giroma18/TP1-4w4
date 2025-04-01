@@ -8,7 +8,7 @@
    
    <?php get_header() ?>
 
-    <section class="erreur__contenu"  style="background-image: url('<?php echo $erreur_background ?>'); background-repeat: no-repeat">
+    <section class="erreur__contenu"  style="background-image: url('<?php echo $erreur_background ?>'); background-repeat: no-repeat;  background-size: cover;">
 
         <div class="erreur__block">
             <h1 class="erreur__titre">Oops, vous avez échoué<br> sur l'île 404 !</h1>

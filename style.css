@@ -189,6 +189,7 @@ Le composant .carte
   font-family: "Smoosh Sans", sans-serif;
   color: #ffd000;
   font-size: 3.5em;
+  font-weight: bolder;
 }
 .erreur__block {
   padding: 10px;
@@ -204,25 +205,27 @@ Le composant .carte
 }
 .erreur__menu ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
 }
 .erreur__menu ul li {
   background-color: #ffea00;
   padding: 10px;
-  color: black;
   border-radius: 6px;
 }
+.erreur__menu ul li a {
+  align-self: center;
+  color: black;
+}
 .erreur__boutton {
-  align-items: center;
-  font-family: "Smoosh Sans", sans-serif;
   font-weight: bolder;
-  font-size: large;
+  font-size: 30px;
   background-color: #ffea00;
   color: rgb(127, 206, 255);
   border-radius: 6px;
   border: none;
-  padding: 20px;
-  width: 200px;
+  padding: 15px;
+  width: 300px;
   display: flex;
   align-self: center;
 }
@@ -234,7 +237,6 @@ Le composant .carte
   background-color: transparent;
   border: none;
   border-bottom: 4px solid #ffea00;
-  width: 200px;
   display: flex;
   align-self: center;
   font-size: 30px;
@@ -248,6 +250,43 @@ Le composant .carte
   width: 200px;
 }
 
+/* Media Query pour les écrans de petite taille (mobiles) */
+@media (max-width: 768px) {
+  .erreur__contenu {
+    padding: 40px;
+    background-size: contain;
+    background-position: top center;
+    height: auto;
+  }
+  .erreur__titre {
+    font-size: 1.5em;
+  }
+  .erreur__block {
+    padding: 15px;
+  }
+  .erreur__block p {
+    font-size: 0.7em;
+  }
+  .erreur__menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .erreur__boutton {
+    font-size: 20px;
+    width: 200px;
+    padding: 10px;
+  }
+  .erreur__rechercher {
+    width: 250px;
+    font-size: 20px;
+  }
+  .erreur__rechercher[type=search]::placeholder {
+    font-size: 18px;
+  }
+}
 /* /////////////////////////
 Layout
 /////////////////////////// */

@@ -18,6 +18,7 @@
         font-family: "Smoosh Sans", sans-serif;
         color: #ffd000;
         font-size: 3.5em;
+        font-weight: bolder;
     }
 
     &__block{
@@ -39,28 +40,31 @@
 
         ul{
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 20px;
 
             li{
                 background-color: #ffea00;
                 padding: 10px;
-                color: black;
                 border-radius: 6px;
+
+                a{
+                    align-self: center;
+                    color: black;
+                }
             }
         }
     }
 
     &__boutton {
-        align-items: center;
-        font-family: "Smoosh Sans", sans-serif;
         font-weight: bolder;
-        font-size: large;
+        font-size: 30px;
         background-color: #ffea00;
         color: rgb(127, 206, 255);
         border-radius: 6px;
         border: none;
-        padding: 20px;
-        width: 200px;
+        padding: 15px;
+        width: 300px;
         display: flex;
         align-self: center;
 
@@ -74,10 +78,8 @@
         background-color: transparent;
         border: none;
         border-bottom: 4px solid #ffea00;
-        width: 200px;
         display: flex;
         align-self: center;
-
         font-size: 30px;
 
         width: 300px;
@@ -92,3 +94,54 @@
         
     }
 }
+
+    /* Media Query pour les écrans de petite taille (mobiles) */
+    @media (max-width: 768px) {
+        .erreur{
+        
+        &__contenu {
+            padding: 40px;
+            background-size: contain;
+            background-position: top center; 
+            height: auto;
+        }
+        
+        &__titre {
+            font-size: 1.5em;
+        }
+
+        &__block {
+            padding: 15px;
+
+            p{
+                font-size: 0.7em;
+            }
+        }
+
+        &__menu {
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-grow: 1;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+
+        &__boutton {
+            font-size: 20px; 
+            width: 200px; 
+            padding: 10px; 
+        }
+
+        &__rechercher {
+            width: 250px; 
+            font-size: 20px; 
+        }
+
+        &__rechercher[type="search"]::placeholder {
+            font-size: 18px; 
+        }
+    }
+    }
+
