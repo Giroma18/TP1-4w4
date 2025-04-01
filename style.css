@@ -178,11 +178,13 @@ Le composant .carte
   font-size: x-large;
   color: rgb(255, 255, 255);
   padding: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .erreur__titre {
   color: #ffea00;
-  text-shadow: 2px 2px 10px #288781;
-  font-size: 100px;
+  font-size: 2.5em;
 }
 .erreur__block {
   padding: 20px;
@@ -191,19 +193,36 @@ Le composant .carte
   flex-direction: column;
   align-items: center;
 }
-.erreur__menu {
-  padding: 0px;
-  border-radius: 8px;
+.erreur__block p {
+  color: #ffea00;
 }
 .erreur__menu ul {
-  padding: 5px;
-  gap: 30px;
-}
-.erreur__menu {
-  background-color: #288781;
   display: flex;
-  flex: 1;
+  justify-content: space-around;
+}
+.erreur__menu ul li {
+  background-color: #ffea00;
+  padding: 10px;
+  color: black;
+  border-radius: 8px;
+}
+.erreur__boutton {
+  align-items: center;
+  font-family: "Smoosh Sans", sans-serif;
+  font-weight: bolder;
+  font-size: large;
+  background-color: #ffea00;
+  color: aquamarine;
+  border-radius: 8px;
+  border: none;
+  padding: 20px;
+  width: 100px;
+  display: flex;
   align-content: center;
+}
+.erreur__boutton:hover {
+  background-color: aquamarine;
+  color: violet;
 }
 
 /* /////////////////////////

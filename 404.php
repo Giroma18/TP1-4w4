@@ -19,7 +19,7 @@
             <p>Pas de panique, cher membre explorateur ! Vous avez dérivé un peu trop loin des destinations de rêve que notre club a soigneusement sélectionnées pour vous. Reprenez votre périple en cliquant sur 'Accueil' pour découvrir à nouveau nos voyages d’exception !</p>
         </div>
         
-        <button class="erreur__button">
+        <button class="erreur__boutton">
             Retour à l'accueil
         </button>
             <div class="erreur__menu">

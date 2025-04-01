@@ -5,12 +5,15 @@
         font-size: x-large;
         color: rgb(255, 255, 255);
         padding: 200px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     &__titre{
         color: #ffea00;
-        text-shadow: 2px 2px 10px #288781;
-        font-size: 100px;
+        font-size: 2.5em;
     }
 
     &__block{
@@ -21,22 +24,44 @@
         flex-direction: column;
         align-items: center;
 
+        p {
+            color: #ffea00;
+        }
+
     }
     &__menu{
-   
-        padding: 0px;
-        border-radius: 8px;
 
         ul{
-            padding: 5px;
-            gap: 30px;
+            display: flex;
+            justify-content: space-around;
+
+            li{
+                background-color: #ffea00;
+                padding: 10px;
+                color: black;
+                border-radius: 8px;
+            }
         }
     }
 
-    &__menu{
-        background-color: #288781;
+    &__boutton {
+        align-items: center;
+        font-family: "Smoosh Sans", sans-serif;
+        font-weight: bolder;
+        font-size: large;
+        background-color: #ffea00;
+        color: aquamarine;
+        border-radius: 8px;
+        border: none;
+        padding: 20px;
+        
+        width: 100px;
         display: flex;
-        flex: 1;
         align-content: center;
+
+    }
+    &__boutton:hover{
+        background-color: aquamarine;
+        color: violet;
     }
 }
