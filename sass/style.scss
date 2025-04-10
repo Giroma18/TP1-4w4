@@ -33,12 +33,13 @@ Les composants
 @import "composants/carte";
 @import "composants/recherche";
 @import "composants/404";
-
+@import "composants/categorie";
+@import "composants/destination";
 /* /////////////////////////
 Layout
 /////////////////////////// */
 @import "layout/principal";
 @import "layout/entete";
 @import "layout/footer";
-@import "layout/footer";
-@import "layout/categorie";
+@import "layout/hero";
+

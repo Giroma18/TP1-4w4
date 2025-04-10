@@ -1,7 +1,10 @@
 <?php 
    /** ZONE HERO */
    $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
-   $hero_background = get_theme_mod('hero_background', 'Default Title'); 
+   for($k=0; $k<3; $k++)
+   {
+        $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title'); 
+   }
    $hero_couleur = get_theme_mod('hero_couleur','#fff');
    ?>
    <style>
@@ -10,8 +13,14 @@
     
     }
    </style>
-    <section  class="hero" style="color : <?php echo $hero_couleur ?>; background-image: url('<?php echo $hero_background ?>'); background-repeat: no-repeat">
-        <div class="hero__contenu global">
+<section  class="hero">
+    <!-- //////////////////////////////////////////////// hero__carrousel -->
+    <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[0] ?>');"></div>    
+    <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[1] ?>');"></div>    
+    <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[2] ?>');"></div>
+
+    <!-- ///////////////////////////////////////////////// hero__contenu -->
+    <div class="hero__contenu global">
             <h1 class="hero__titre hero__couleur">
                 <?php bloginfo('name'); ?>
             </h1>
@@ -41,4 +50,4 @@
 
             </div>
         </div>
-    </section>
+</section>
