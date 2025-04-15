@@ -11,25 +11,26 @@ Le composant .carte
     justify-content: center;
     align-items: center;
     border: #cac9c9 solid 1px;
-    -webkit-box-shadow: 0px 4px 2px 2px #C2C2C2;
-    box-shadow: 0px 4px 2px 2px #C2C2C2;
     margin: 1em;
 
     .post-categories{
 
       display: flex;
-      gap: 40px;
+      padding: 0%;
+      gap: 4rem;
 
       li{
         list-style: none;
-        background-color: #00ff26;
+        background-color: #007bff;
         padding: 10px 20px;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
+        border-radius: 8px;
         cursor: pointer;
         a{
+          color: #ffffff;
+        }
+        &:hover {
 
+          background-color: #add4ff;
         }
 
       }
@@ -48,8 +49,7 @@ Le composant .carte
     &__image img {
       width: 300px;
       height: 200px;
-      background-color: #007bff;
-
+      
       @media screen and (max-width:$point__rupture) {
         width: 200px;
         height: 100px;
@@ -58,18 +58,16 @@ Le composant .carte
 
     &__temp{
 
-
       display: flex;
-      flex-direction: row;
-      gap: 20px;
+      justify-content: center;
+      gap: 2rem;
 
       p{
-
+        text-align: center;
+        font-size: smaller;
         padding: 10px;
         border-radius: 8px;
         border: #cac9c9 solid 1px;
-        -webkit-box-shadow: 0px 4px 2px 2px #C2C2C2;
-        box-shadow: 0px 4px 2px 2px #C2C2C2;  
       }
      
     }
@@ -82,6 +80,10 @@ Le composant .carte
     &__titre {
       font-size: 24px;
       color: #333;
+
+      &:hover {
+        color: #add4ff;
+      }
     }
   
     &__description {
@@ -91,21 +93,9 @@ Le composant .carte
   
     &__bouton {
       padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-
-
-  
-    &--actif {
-      background-color: #0056b3;
-    }
-  
-    &:hover {
-      background-color: #add4ff;
-    }
   }
 }
   

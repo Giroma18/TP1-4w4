@@ -19,6 +19,7 @@ function mon_theme_supports() {
   add_theme_support('title-tag');
   add_theme_support('menus');
   add_theme_support('post-thumbnails');
+  add_image_size('logo', 75, 75, true);
 }
 add_action( 'after_setup_theme', 'mon_theme_supports' );
 

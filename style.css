@@ -78,22 +78,25 @@ Le composant .carte
   justify-content: center;
   align-items: center;
   border: #cac9c9 solid 1px;
-  -webkit-box-shadow: 0px 4px 2px 2px #C2C2C2;
-  box-shadow: 0px 4px 2px 2px #C2C2C2;
   margin: 1em;
 }
 .carte .post-categories {
   display: flex;
-  gap: 40px;
+  padding: 0%;
+  gap: 4rem;
 }
 .carte .post-categories li {
   list-style: none;
-  background-color: #00ff26;
+  background-color: #007bff;
   padding: 10px 20px;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+}
+.carte .post-categories li a {
+  color: #ffffff;
+}
+.carte .post-categories li:hover {
+  background-color: #add4ff;
 }
 .carte--grande {
   display: flex;
@@ -104,7 +107,6 @@ Le composant .carte
 .carte__image img {
   width: 300px;
   height: 200px;
-  background-color: #007bff;
 }
 @media screen and (max-width: 700px) {
   .carte__image img {
@@ -114,15 +116,15 @@ Le composant .carte
 }
 .carte__temp {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  justify-content: center;
+  gap: 2rem;
 }
 .carte__temp p {
+  text-align: center;
+  font-size: smaller;
   padding: 10px;
   border-radius: 8px;
   border: #cac9c9 solid 1px;
-  -webkit-box-shadow: 0px 4px 2px 2px #C2C2C2;
-  box-shadow: 0px 4px 2px 2px #C2C2C2;
 }
 .carte__contenu {
   margin-top: 15px;
@@ -131,23 +133,18 @@ Le composant .carte
   font-size: 24px;
   color: #333;
 }
+.carte__titre:hover {
+  color: #add4ff;
+}
 .carte__description {
   font-size: 16px;
   color: #666;
 }
 .carte__bouton {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-.carte__bouton--actif {
-  background-color: #0056b3;
-}
-.carte__bouton:hover {
-  background-color: #add4ff;
 }
 
 .recherche {
@@ -466,7 +463,7 @@ Layout
   .burger {
     display: block;
     position: absolute;
-    top: 10px;
+    top: 50px;
     right: 10px;
     z-index: 1;
   }
@@ -509,13 +506,14 @@ Layout
     background-color: rgb(252, 241, 252);
   }
 }
-.entete__logo {
-  width: 300px;
+.entete .custom-logo {
+  width: 400px;
   z-index: 2;
 }
 @media screen and (max-width: 700px) {
-  .entete__logo {
-    width: 110px;
+  .entete .custom-logo {
+    width: 250px;
+    height: 100px;
   }
 }
 
@@ -588,18 +586,17 @@ Layout
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
+  z-index: -1;
+  opacity: 0;
+  /**cover*/
 }
-.hero__block {
-  padding: 20px;
-  background-color: rgba(144, 144, 144, 0.7);
-  border: #484848 solid 1px;
-  -webkit-box-shadow: 0px 4px 2px 2px #484848;
-  box-shadow: 0px 4px 2px 2px 303030;
-  border-radius: 8px;
+.hero__carrousel--active {
+  opacity: 1;
 }
-.hero__block p, .hero__block a {
+.hero p, .hero a, .hero h1, .hero__icone-app {
   margin: 0;
   padding: 20px;
+  background-color: rgba(209, 209, 209, 0.7);
 }
 .hero__titre {
   color: rgb(255, 255, 255);
@@ -623,4 +620,11 @@ Layout
   gap: 5px;
   display: flex;
   flex-direction: row;
+}
+.hero__radio {
+  position: absolute;
+  bottom: 90px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }/*# sourceMappingURL=style.css.map */

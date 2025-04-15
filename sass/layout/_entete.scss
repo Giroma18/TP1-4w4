@@ -3,7 +3,7 @@
     @media screen and (max-width: $point__rupture) {
         display: block;
         position: absolute;
-        top: 10px;
+        top: 50px;
         right: 10px;
         z-index: 1;
     }
@@ -35,7 +35,7 @@
             display: none;
             flex-direction: column;
             flex-wrap: nowrap;
-
+            
             height: 55vh;
             width: 100vw;
             gap: 0;
@@ -48,11 +48,12 @@
         }  
     }
 
-    &__logo{
-        width: 300px;
+    .custom-logo{
+        width: 400px;
         z-index: 2;
         @media screen and (max-width:$point__rupture) {
-            width: 110px;
+            width: 250px;
+            height: 100px;
         }
     }
 }

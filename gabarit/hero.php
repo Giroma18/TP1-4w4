@@ -15,17 +15,22 @@
    </style>
 <section  class="hero">
     <!-- //////////////////////////////////////////////// hero__carrousel -->
-    <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[0] ?>');"></div>    
+    <div class="hero__carrousel--active" style="background-image: url('<?php echo $hero_background[0] ?>');"></div>    
     <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[1] ?>');"></div>    
     <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[2] ?>');"></div>
+    <div class="hero__radio">
+        <input class="hero__radio__input" type="radio" name="carrousel" data-id_carrousel="0" checked="checked">
+        <input class="hero__radio__input" type="radio" name="carrousel" data-id_carrousel="1">
+        <input class="hero__radio__input" type="radio" name="carrousel" data-id_carrousel="2">
+    </div>
 
     <!-- ///////////////////////////////////////////////// hero__contenu -->
-    <div class="hero__contenu global">
+    <div class="hero__contenu global" style="color : <?php echo $hero_couleur ?>" >
+            
             <h1 class="hero__titre hero__couleur">
                 <?php bloginfo('name'); ?>
             </h1>
-            
-            <div class="hero__block" style="color : <?php echo $hero_couleur ?>">
+
                 <p class="hero__description"> <?php bloginfo('desciption'); ?></p>
 
                 <p class="hero__couleur" style="color : <?php echo $hero_couleur ?>">
@@ -48,6 +53,6 @@
                     Inscription
                 </button>
 
-            </div>
+
         </div>
 </section>
