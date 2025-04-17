@@ -27,7 +27,7 @@
     <!-- ///////////////////////////////////////////////// hero__contenu -->
     <div class="hero__contenu global" style="color : <?php echo $hero_couleur ?>" >
             
-            <h1 class="hero__titre hero__couleur">
+            <h1 class="hero__titre hero__couleur" style="color : <?php echo $hero_couleur ?>">
                 <?php bloginfo('name'); ?>
             </h1>
 
@@ -35,9 +35,7 @@
                     <?php bloginfo('desciption'); ?>
                 </p>
 
-                <p class="hero__couleur" style="color : <?php echo $hero_couleur ?>">
-                    Auteur : <?php echo $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); ?>
-                </p>
+               
             
                 <a href="" class="hero__description hero__couleur" style="color : <?php echo $hero_couleur ?>">
                     <?php echo $footer_courriel = get_theme_mod('footer_courriel', 'Default Title'); ?>
@@ -52,10 +50,14 @@
                 </a>
 
                 <?php get_template_part('gabarit/icone-sociaux') ?>
-                <button class="hero__bouton">
-                    Inscription
-                </button>
 
+                <p class="hero__auteur hero__couleur" style="color : <?php echo $hero_couleur ?>">
+                    Auteur : <?php echo $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); ?>
+                </p>
+                    <button class="hero__bouton">
+                        Inscription
+                    </button>
+                </div>
 
         </div>
 </section>
