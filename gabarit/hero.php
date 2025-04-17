@@ -15,7 +15,7 @@
    </style>
 <section  class="hero">
     <!-- //////////////////////////////////////////////// hero__carrousel -->
-    <div class="hero__carrousel--active" style="background-image: url('<?php echo $hero_background[0] ?>');"></div>    
+    <div class="hero__carrousel  hero__carrousel--active" style="background-image: url('<?php echo $hero_background[0] ?>');"></div> 
     <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[1] ?>');"></div>    
     <div class="hero__carrousel" style="background-image: url('<?php echo $hero_background[2] ?>');"></div>
     <div class="hero__radio">
@@ -31,10 +31,13 @@
                 <?php bloginfo('name'); ?>
             </h1>
 
-                <p class="hero__description"> <?php bloginfo('desciption'); ?></p>
+                <p class="hero__description"> 
+                    <?php bloginfo('desciption'); ?>
+                </p>
 
                 <p class="hero__couleur" style="color : <?php echo $hero_couleur ?>">
-                    Auteur : <?php echo $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); ?></p>
+                    Auteur : <?php echo $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); ?>
+                </p>
             
                 <a href="" class="hero__description hero__couleur" style="color : <?php echo $hero_couleur ?>">
                     <?php echo $footer_courriel = get_theme_mod('footer_courriel', 'Default Title'); ?>
