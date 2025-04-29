@@ -3,6 +3,15 @@
  * Gabarit permettant d'afficher une carte
  */
 
+$categorie = get_the_category();
+$macategorie = single_cat_title('',false);
+if (!$macategorie){
+    $macategorie = "Populaire";
+}
+
+foreach($categorie as $une_categorie){
+   if ($une_categorie->name != $macategorie) {echo $une_categorie->name;}
+}
 ?>
 
 <article class="carte carte--grande">
@@ -20,7 +29,6 @@
                         <p>Température max. <?php echo the_field('temperature_maximum'); ?>°C</p>
                         <p>Température moy. <?php echo the_field('temperature_moyenne'); ?>°C</p>
                     </div>
-                
-                    <?php the_category();?>
+                    
                     
                 </article>

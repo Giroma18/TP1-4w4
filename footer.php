@@ -1,7 +1,14 @@
-<footer class="piedpage">
-    <?php
+<?php
     $footer_mission = get_theme_mod('footer_mission', 'Default Title'); 
+    $footer_couleur_arriere = get_theme_mod('footer_couleur_arriere', '#eea44a');
+    
+    /** Permet d'Afficher une vague avant le footer */
+    vague($footer_couleur_arriere)
     ?>
+
+
+<footer class="piedpage" style ="background-color: <?= $footer_couleur_arriere ?>">
+    
 
         <section class="piedpage__s1">
                 <h4>Menu</h4>

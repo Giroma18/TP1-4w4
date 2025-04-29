@@ -381,6 +381,10 @@ Le composant .carte
   padding: 10px;
 }
 
+.vague {
+  position: relative;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */

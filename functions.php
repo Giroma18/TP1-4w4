@@ -6,6 +6,7 @@ $functions_dir = get_template_directory() . '/functions/';
 include_once $functions_dir . 'customizer.php';
 include_once $functions_dir . 'option.php';
 include_once $functions_dir . 'genere-list-categorie.php';
+include_once $functions_dir . 'svg.php';
 // Inclure d'autres fichiers si nécessaire
 // include_once $functions_dir . 'autre-fichier.php';
 // include_once $functions_dir . 'encore-un-autre.php';
