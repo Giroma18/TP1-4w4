@@ -10,8 +10,8 @@
    <style>
     .hero__couleur{
         color: white;
-    
     }
+
    </style>
 <section  class="hero">
     <!-- //////////////////////////////////////////////// hero__carrousel -->

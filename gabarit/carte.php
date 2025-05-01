@@ -4,13 +4,10 @@
  */
 
 $categorie = get_the_category();
+// print_r ($categorie);
 $macategorie = single_cat_title('',false);
 if (!$macategorie){
     $macategorie = "Populaire";
-}
-
-foreach($categorie as $une_categorie){
-   if ($une_categorie->name != $macategorie) {echo $une_categorie->name;}
 }
 ?>
 
@@ -30,5 +27,9 @@ foreach($categorie as $une_categorie){
                         <p>Température moy. <?php echo the_field('temperature_moyenne'); ?>°C</p>
                     </div>
                     
-                    
+                    <?php foreach($categorie as $une_categorie): ?>
+                    <?php if ($une_categorie->name != $macategorie): ?>
+                    <a href="<?= get_category_link($une_categorie->term_id)?>" class="carte__bouton"><?= $une_categorie->name; ?></a>
+                    <?php endif; ?>
+                    <?php endforeach; ?>
                 </article>
