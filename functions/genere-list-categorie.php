@@ -34,3 +34,17 @@ function categories_liste($parent_slug){
 
     
 }
+
+/**
+ * filtre les catégorie en retirant la catégorie par défaut
+ * @param : $macategorie
+ */
+function categorie_par_destination($macategorie){
+    $categorie = get_the_category();
+        // print_r ($categorie);
+    foreach($categorie as $une_categorie): 
+    if ($une_categorie->name != $macategorie): ?>
+    <a href="<?= get_category_link($une_categorie->term_id)?>" class="carte__bouton"><?= $une_categorie->name; ?></a>
+    <?php endif; ?>
+    <?php endforeach;
+} ?>

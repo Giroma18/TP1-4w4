@@ -43,7 +43,19 @@ Le composant .carte
       flex-direction: column;
       justify-content: center;
       padding: 20px;
+      transition: all 0.3s ease;
    
+    }
+
+    &--grande:hover {
+      transform: translate(-2px, -2px);
+      -webkit-box-shadow: 10px 10px 10px 1px #A1A1A1;
+      box-shadow: 10px 10px 10px 1px #A1A1A1;
+    }
+
+    &__categorie {
+      display: flex;
+      flex-direction: row;
     }
   
     &__image img {

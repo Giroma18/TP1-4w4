@@ -23,10 +23,25 @@ function theme_31w_customize_register($wp_customize) {
       'type' => 'text',
     ));
 
+    /////////////////////////////////////////////////////////// Changer le nombre d'image dans la zone Hero
+
+    $wp_customize->add_setting('hero_nombre_image', array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+  
+    $wp_customize->add_control('hero_nombre_image', array(
+      'label' => __('Nombre_image', 'theme_31w'),
+      'section' => 'hero_section',
+      'type' => 'text',
+    ));
 
 
     ////////////////////////////////////////////////////////// Image en background de la zone Hero
-    for($k=0; $k<3; $k++)
+
+    $hero_nombre_image = get_theme_mod('hero_nombre_image', 3);
+
+    for($k=0; $k< $hero_nombre_image; $k++)
     {
     $wp_customize->add_setting('hero_background_' . $k, array(
       'default' => '',

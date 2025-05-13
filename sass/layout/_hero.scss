@@ -23,7 +23,7 @@
 
         &--active{ // hero__carrousel--active
             opacity: 1;
-            transition: opacity 0.5s ease-in-out; // transition fluide
+            transition: opacity 1s ease-in-out; // transition fluide
         }
     }
 
@@ -82,8 +82,11 @@
         gap: 2rem;
 
         &__input {
-            appearance: none;
-            -webkit-appearance: none;
+            display: none;
+
+        }
+
+        &__label {
             width: 16px;
             height: 16px;
             border-radius: 50%;
@@ -91,11 +94,10 @@
             background-color: transparent;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            outline: none;
           }
           
           /* Quand le bouton est sélectionné */
-          &__input:checked {
+          &__input:checked + label {
             background-color: white;
           }
     }

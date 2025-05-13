@@ -103,6 +103,16 @@ Le composant .carte
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  transition: all 0.3s ease;
+}
+.carte--grande:hover {
+  transform: translate(-2px, -2px);
+  -webkit-box-shadow: 10px 10px 10px 1px #A1A1A1;
+  box-shadow: 10px 10px 10px 1px #A1A1A1;
+}
+.carte__categorie {
+  display: flex;
+  flex-direction: row;
 }
 .carte__image img {
   width: 300px;
@@ -364,14 +374,20 @@ Le composant .carte
 .destination h3:hover {
   background-color: rgb(97, 223, 255);
 }
+.destination__list {
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .destination__info {
   overflow: hidden;
-  transition: ease;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
   background-color: aliceblue;
   padding: 0 10px;
+  opacity: 0;
+  transition: all 1s ease;
 }
 .destination input[type=checkbox] {
   display: none;
@@ -379,6 +395,7 @@ Le composant .carte
 .destination input.article-checkbox:checked ~ .destination__info {
   max-height: 500px;
   padding: 10px;
+  opacity: 1;
 }
 
 .vague {
@@ -593,7 +610,7 @@ Layout
 }
 .hero__carrousel--active {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 .hero p, .hero a, .hero h1, .hero__icone-app {
   flex: 0;
@@ -643,8 +660,9 @@ Layout
   /* Quand le bouton est sélectionné */
 }
 .hero__radio__input {
-  appearance: none;
-  -webkit-appearance: none;
+  display: none;
+}
+.hero__radio__label {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -652,8 +670,38 @@ Layout
   background-color: transparent;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  outline: none;
 }
-.hero__radio__input:checked {
+.hero__radio__input:checked + label {
   background-color: white;
+}
+
+/**
+Animation de la section hero
+Référence https://css-tricks.com/almanac/properties/a/animation/
+
+*/
+.hero__animation {
+  display: none;
+}
+.hero__animation--active {
+  display: block;
+}
+.hero__animation--active .hero__titre, .hero__animation--active .hero__description {
+  position: relative;
+  animation: contenu cubic-bezier(0.53, -0.8, 0.44, 1.64) 1s forwards;
+}
+
+.hero__titre {
+  transform: translateY(-1000px);
+}
+
+.hero__description {
+  transform: translateX(-1000px);
+  animation-delay: 2s;
+}
+
+@keyframes contenu {
+  100% {
+    transform: translate(0, 0);
+  }
 }/*# sourceMappingURL=style.css.map */
