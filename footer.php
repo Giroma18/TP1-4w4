@@ -1,6 +1,7 @@
 <?php
     $footer_mission = get_theme_mod('footer_mission', 'Default Title'); 
     $footer_couleur_arriere = get_theme_mod('footer_couleur_arriere', '#eea44a');
+    $image_footer = get_theme_mod('image_footer', '#eea44a');
     
     /** Permet d'Afficher une vague avant le footer */
     vague($footer_couleur_arriere)
@@ -8,7 +9,7 @@
 
 
 <footer class="piedpage" style ="background-color: <?= $footer_couleur_arriere ?>">
-    
+    <div class="piedpage__image" style="background-image: url('<?php echo esc_url($image_footer); ?>');"></div>
 
         <section class="piedpage__s1">
                 <h4>Menu</h4>
@@ -21,6 +22,7 @@
             <div class="piedpage__icone-app">
                 <img src="https://s2.svgbox.net/materialui.svg?ic=facebook&color=000" width="32" height="32">
                 <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000" width="32" height="32">
+                <img src="https://s2.svgbox.net/social.svg?ic=github" width="32" height="32">
                 
             </div>
 
@@ -42,11 +44,14 @@
                 <?php get_search_form();?>
             </div>
 
+            
+
         </section>
         
         <section class="piedpage__s3">
             <h4>Mission club de voyage </h4>
             <?php echo $footer_mission; ?>
+            
         </section>
 
         <section class="piedpage__s4">

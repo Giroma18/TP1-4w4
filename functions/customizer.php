@@ -61,6 +61,17 @@ function theme_31w_customize_register($wp_customize) {
       'priority' => 30,
     ));
 
+       ///////////////////////////////////////////////////////// Couleur de la vague de la section footer
+       $wp_customize->add_setting('footer_couleur_arriere', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+        
+      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footer_couleur_arriere', array(
+        'label' => __('Couleur de la vague', 'theme_31w'),
+        'section' => 'footer_section',
+      )));
+
     //////////////////////////////////////////////////////////////// Courriel
     $wp_customize->add_setting('footer_courriel', array(
       'default' => __('cmaisonneuve@info.qc.ca', 'theme_31w'),
@@ -109,7 +120,18 @@ function theme_31w_customize_register($wp_customize) {
       'section' => 'footer_section',
       'type' => 'textarea',
     ));
-  
+
+    ////////////////////////////////////////////////////////// Image dans la section footer
+    $wp_customize->add_setting('image_footer', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_footer', array(
+      'label' => __('Image de destination', 'theme_31w'),
+      'section' => 'footer_section',
+    )));
+
     ///////////////////////////////////////////////////////// Couleur du texte de la zone Héro
     $wp_customize->add_setting('hero_couleur', array(
       'default' => '',
