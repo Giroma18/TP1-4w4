@@ -19,12 +19,9 @@
                     "container_class"=>"piedpage__s1__externe"
                 ));?>
 
-            <div class="piedpage__icone-app">
-                <img src="https://s2.svgbox.net/materialui.svg?ic=facebook&color=000" width="32" height="32">
-                <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000" width="32" height="32">
-                <img src="https://s2.svgbox.net/social.svg?ic=github" width="32" height="32">
-                
-            </div>
+                <?php 
+                icones_sociaux();
+                ?>
 
         </section>
 

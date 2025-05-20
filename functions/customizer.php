@@ -72,6 +72,51 @@ function theme_31w_customize_register($wp_customize) {
         'section' => 'footer_section',
       )));
 
+
+    /////////////////////////////////////////////////////////// Changer le nombre d'icone dans la section footer
+
+    $wp_customize->add_setting('footer_nombre_icone', array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+  
+    $wp_customize->add_control('footer_nombre_icone', array(
+      'label' => __('Nombre_icone', 'theme_31w'),
+      'section' => 'footer_section',
+      'type' => 'text',
+    ));
+
+    ////////////////////////////////////////////////////////// Icone de la section footer
+
+    $footer_nombre_icone = get_theme_mod('footer_nombre_icone', 3);
+
+    for($k=0; $k<  $footer_nombre_icone; $k++)
+    {
+      $wp_customize->add_setting('nom_icone_' . $k, array(
+        'default' => __('', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+      ));
+    
+      $wp_customize->add_control('nom_icone_'. $k , array(
+        'label' => __('Nom site social ' . ($k+1), 'theme_31w'),
+        'section' => 'footer_section',
+        'type' => 'text',
+      ));
+
+
+    $wp_customize->add_setting('lien_icone_' . $k, array(
+      'default' => __('', 'theme_31w'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+  
+    $wp_customize->add_control('lien_icone_'. $k, array(
+      'label' => __('Adresse du site social ' . ($k+1), 'theme_31w'),
+      'section' => 'footer_section',
+      'type' => 'text',
+    ));
+
+  }
+
     //////////////////////////////////////////////////////////////// Courriel
     $wp_customize->add_setting('footer_courriel', array(
       'default' => __('cmaisonneuve@info.qc.ca', 'theme_31w'),

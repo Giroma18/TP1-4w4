@@ -519,7 +519,6 @@ Layout
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(252, 241, 252);
 }
 .entete__nav {
   display: flex;
@@ -655,8 +654,8 @@ Layout
 }
 .hero__auteur {
   position: absolute;
-  bottom: 200px;
-  left: 300px;
+  bottom: 300px;
+  left: 200px;
   margin: 0;
 }
 .hero__icone-app {

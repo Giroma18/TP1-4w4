@@ -65,7 +65,9 @@
                     <?php echo $footer_adresse = get_theme_mod('footer_telephone', 'Default Title'); ?>
                 </a>
 
-                <?php get_template_part('gabarit/icone-sociaux') ?>
+                <?php 
+                icones_sociaux();
+                ?>
 
                 <p class="hero__auteur hero__couleur" style="color : <?php echo $hero_couleur ?>">
                     Auteur : <?php echo $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); ?>
