@@ -26,7 +26,7 @@
             categoryId = li.dataset.id;
 
             apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
-            apiUrlMethode = `${domaine}wp-json/wp/v2/posts?search=${methodeId}`;
+            apiUrl = `${domaine}wp-json/wp/v2/posts?search=${categoryId}`;
 
             mon_fetch(apiUrl);
         })

@@ -1,0 +1,13 @@
+.populaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: beige;
+    padding: 30px;
+
+    &__titre {
+        font-size: 100px;
+        font-weight: bold;
+    }
+}
