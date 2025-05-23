@@ -3,8 +3,9 @@
     let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
 
     const domaine = window.location.href
-
+    //methode = categorie
     let apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
+    let apiUrlMethode = `${domaine}wp-json/wp/v2/posts?search=${methodeId}`;
 
     const categorie__ul__li = document.querySelectorAll(".categorie__ul__li");
 
