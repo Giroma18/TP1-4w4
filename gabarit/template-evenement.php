@@ -2,6 +2,7 @@
 /*
 Template Name: Événement
 */
+$couleurVague = get_theme_mod('couleur_vague', '#34dde2');
 ?>
 <?php get_header(); ?>
 
@@ -18,13 +19,30 @@ Template Name: Événement
                 <p>La date : <?php the_field('date_evenement'); ?> </p>  
             </article>
             <?php endwhile; endif; ?>
-            <!-- //////////////////////////////////// section destination REST-API -->
-    <?php categories_liste("destination"); ?>
-    <section class="destination">
-        <h2 class="destination__titre">Articles de la catégorie</h2>
-        <div class="destination__list"></div>
-    </section>
-        </div>
-    </section>
 
+
+    <!-- //////////////////////////////////// section destination REST-API -->
+    <?php categories_liste("destination");  ?>
+
+    <?php vague($couleurVague) ?>
+    <div style ="background-color: #34dde2">
+    <section class="destination" >
+   <ul>
+        <li>France</li>
+        <li>États-Unis</li>
+        <li>Canada</li>
+        <li>Argentine</li>
+        <li>Chili</li>
+        <li>Belgique</li>
+        <li>Maroc</li>
+        <li>Mexique</li>
+        <li>Japon</li>
+        <li>Italie</li>
+        <li>Islande</li>
+        <li>Chine</li>
+        <li>Grèce</li>
+        <li>Suisse</li>
+    </ul>
+    </section>
+    </div>
 <?php get_footer(); ?>

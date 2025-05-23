@@ -71,6 +71,16 @@ function theme_31w_customize_register($wp_customize) {
         'label' => __('Couleur de la vague', 'theme_31w'),
         'section' => 'footer_section',
       )));
+       ///////////////////////////////////////////////////////// Couleur de la vague de la section destination
+       $wp_customize->add_setting('couleur_vague', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+        
+      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footer_couleur_arriere', array(
+        'label' => __('Couleur de la vague2', 'theme_31w'),
+        'section' => 'footer_section',
+      )));
 
 
     /////////////////////////////////////////////////////////// Changer le nombre d'icone dans la section footer
